@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-function Section({ title, slogan, backgroundImage, leftButtonText, rightButtonText, hasArrow }) {
+function Section({ cate, title, slogan, backgroundImage, leftButtonText, rightButtonText, hasArrow }) {
     return (
-        <Subpart backgroundImage={backgroundImage}>
+        <Subpart id={cate} backgroundImage={backgroundImage}>
             <Fade bottom>
                 <SectionText>
                     <h1>{title}</h1>

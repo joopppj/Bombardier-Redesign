@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@material-ui/icons/Menu';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
+import { Link } from 'react-scroll';
 
 import { selectJets, slelectJets } from '../features/jetSlice/jetSlice';
 import { useSelector } from 'react-redux';
@@ -16,14 +17,14 @@ function Header() {
             </a>
             <Menu>
                 {jets && jets.map((jet, index) =>
-                    (<a key={index} href="">{jet}</a>)
+                    (<Link to={jet} spy={true} smooth={true}><a key={index} href=""> {jet}</a></Link>)
                 )}
 
 
 
             </Menu>
             <OtherMenu>
-                <a href="https://github.com/joopppj">Source Code</a>
+                <a href="https://github.com/joopppj/Bombardier-Redesign">Source Code</a>
                 <a href="https://bombardier.com/en">Old Site</a>
                 <SideMenu onClick={() => setDropDownOpen(true)} />
             </OtherMenu>
